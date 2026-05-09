@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Alchemist's Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<header id="navbar">
+    <div class="logo">
+        <span class="logo-line">THE ALCHEMIST'S</span>
+        <span class="logo-sub">TABLE</span>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="#menu" class="nav-link" data-page="menu">The Menu</a></li>
+            <li><a href="#reservations" class="nav-link" data-page="reservations">Reservations</a></li>
+            <li><a href="#gallery" class="nav-link" data-page="gallery">Gallery</a></li>
+            <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#home" class="mob-link">Home</a></li>
+        <li><a href="#menu" class="mob-link">The Menu</a></li>
+        <li><a href="#reservations" class="mob-link">Reservations</a></li>
+        <li><a href="#gallery" class="mob-link">Gallery</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+</div>
+
+<!-- ═══════════════════════ HOME PAGE ═══════════════════════ -->
+<section id="home" class="page active">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Est. 2019 — Rawalpindi</p>
+            <h1 class="hero-title">An Unforgettable<br><em>Journey of Taste</em></h1>
+            <p class="hero-sub">Experience exquisite dining. Where every plate tells a story.</p>
+            <div class="hero-btns">
+                <a href="#reservations" class="btn-primary js-nav" data-page="reservations">Reserve a Table</a>
+                <a href="#menu" class="btn-ghost js-nav" data-page="menu">Explore Menu</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- FEATURED DISHES -->
+    <div class="section featured-section">
+        <div class="section-header">
+            <p class="tag">Signature Creations</p>
+            <h2>Featured Dishes</h2>
+            <div class="rule"></div>
+        </div>
+        <div class="tabs">
+            <button class="tab active" data-tab="appetizers">Appetizers</button>
+            <button class="tab" data-tab="mains">Featured Dishes</button>
+            <button class="tab" data-tab="desserts">Desserts</button>
+        </div>
+        <div class="dishes-grid" id="dishes-grid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- PHILOSOPHY -->
+    <div class="philosophy-section">
+        <div class="philosophy-image">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Fine dining plate">
+            <div class="phi-badge">
+                <span class="phi-num">12+</span>
+                <span class="phi-label">Years of<br>Excellence</span>
+            </div>
+        </div>
+        <div class="philosophy-text">
+            <p class="tag">Our Philosophy</p>
+            <h2>Where Science Meets<br><em>Culinary Art</em></h2>
+            <p class="body-text">At The Alchemist's Table, we transform the finest seasonal ingredients into extraordinary dining experiences. Every dish is crafted with precision, passion, and the curiosity of a true alchemist — turning the ordinary into the transcendent.</p>
+            <p class="body-text">Our chefs source ingredients from local farms and global artisans, weaving stories of terroir and technique into every course.</p>
+            <a href="#reservations" class="btn-primary js-nav" data-page="reservations">Reserve Now</a>
+        </div>
+    </div>
+
+    <!-- BONUSES / EXPERIENCES -->
+    <div class="section experiences-section">
+        <div class="section-header">
+            <p class="tag">Beyond the Plate</p>
+            <h2>Our Experiences</h2>
+            <div class="rule"></div>
+        </div>
+        <div class="exp-grid">
+            <div class="exp-card">
+                <div class="exp-icon">🍷</div>
+                <h3>Wine Pairing</h3>
+                <p>Curated selections from world-renowned vineyards, paired course by course by our sommelier.</p>
+            </div>
+            <div class="exp-card">
+                <div class="exp-icon">👨‍🍳</div>
+                <h3>Chef's Table</h3>
+                <p>An intimate 8-seat experience behind the kitchen pass. Watch culinary magic unfold.</p>
+            </div>
+            <div class="exp-card">
+                <div class="exp-icon">🌿</div>
+                <h3>Tasting Menu</h3>
+                <p>A 7-course journey through the season's finest ingredients, guided by our head chef.</p>
+            </div>
+            <div class="exp-card">
+                <div class="exp-icon">🎂</div>
+                <h3>Private Events</h3>
+                <p>Celebrate life's milestones in our private dining room for up to 40 guests.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ═══════════════════════ MENU PAGE ═══════════════════════ -->
+<section id="menu" class="page">
+    <div class="page-hero menu-hero">
+        <h1>The Menu</h1>
+        <p>Crafted with intention. Served with precision.</p>
+    </div>
+    <div class="section">
+        <div class="menu-category">
+            <h3 class="menu-cat-title">Appetizers</h3>
+            <div class="rule small"></div>
+            <div class="menu-list" id="menu-appetizers"></div>
+        </div>
+        <div class="menu-category">
+            <h3 class="menu-cat-title">Mains</h3>
+            <div class="rule small"></div>
+            <div class="menu-list" id="menu-mains"></div>
+        </div>
+        <div class="menu-category">
+            <h3 class="menu-cat-title">Desserts</h3>
+            <div class="rule small"></div>
+            <div class="menu-list" id="menu-desserts"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ RESERVATIONS PAGE ═══════════════════════ -->
+<section id="reservations" class="page">
+    <div class="page-hero res-hero">
+        <h1>Reservations</h1>
+        <p>Secure your seat at the table.</p>
+    </div>
+    <div class="section res-layout">
+        <div class="res-info">
+            <p class="tag">Opening Hours</p>
+            <div class="hours-list">
+                <div class="hours-row"><span>Monday – Friday</span><span>12:00 – 15:00 & 18:00 – 23:00</span></div>
+                <div class="hours-row"><span>Saturday</span><span>12:00 – 00:00</span></div>
+                <div class="hours-row"><span>Sunday</span><span>12:00 – 22:00</span></div>
+            </div>
+            <p class="tag" style="margin-top:2rem">Dress Code</p>
+            <p class="body-text">Smart casual. We encourage guests to dress in a manner befitting the occasion.</p>
+            <p class="tag" style="margin-top:2rem">Group Bookings</p>
+            <p class="body-text">For parties of 8 or more, please contact us directly at <strong>+150 630-7989</strong></p>
+        </div>
+        <div class="res-form-wrap">
+            <form class="res-form" id="resForm">
+                <h3>Book Your Table</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <select required>
+                            <option value="">Select Time</option>
+                            <option>12:00 PM</option>
+                            <option>12:30 PM</option>
+                            <option>1:00 PM</option>
+                            <option>1:30 PM</option>
+                            <option>6:00 PM</option>
+                            <option>6:30 PM</option>
+                            <option>7:00 PM</option>
+                            <option>7:30 PM</option>
+                            <option>8:00 PM</option>
+                            <option>8:30 PM</option>
+                            <option>9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Guests</label>
+                        <select required>
+                            <option value="">Number of guests</option>
+                            <option>1 Guest</option>
+                            <option>2 Guests</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                            <option>5 Guests</option>
+                            <option>6 Guests</option>
+                            <option>7 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Occasion (Optional)</label>
+                        <select>
+                            <option value="">None</option>
+                            <option>Birthday</option>
+                            <option>Anniversary</option>
+                            <option>Business Dinner</option>
+                            <option>Date Night</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group full">
+                    <label>Special Requests</label>
+                    <textarea rows="3" placeholder="Dietary requirements, allergies, special arrangements..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary wide">Confirm Reservation</button>
+            </form>
+            <div class="res-success" id="resSuccess" style="display:none">
+                <div class="success-icon">✓</div>
+                <h3>Reservation Confirmed!</h3>
+                <p>Thank you! We'll reach out shortly to confirm your booking. We look forward to welcoming you.</p>
+                <button class="btn-ghost" id="newResBtn">Make Another Reservation</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ GALLERY PAGE ═══════════════════════ -->
+<section id="gallery" class="page">
+    <div class="page-hero gal-hero">
+        <h1>Gallery</h1>
+        <p>A visual feast before the real one.</p>
+    </div>
+    <div class="section">
+        <div class="gallery-filters">
+            <button class="gf active" data-cat="all">All</button>
+            <button class="gf" data-cat="food">Food</button>
+            <button class="gf" data-cat="interior">Interior</button>
+            <button class="gf" data-cat="team">Our Team</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ CONTACT PAGE ═══════════════════════ -->
+<section id="contact" class="page">
+    <div class="page-hero con-hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you.</p>
+    </div>
+    <div class="section contact-layout">
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="con-icon">📍</div>
+                <h4>Visit Us</h4>
+                <p>131 Nattam Ave Road<br>Rawalpindi, Bawalpindi<br>Rawalpindi</p>
+            </div>
+            <div class="contact-card">
+                <div class="con-icon">📞</div>
+                <h4>Call Us</h4>
+                <p>+150 630-7 989</p>
+                <p class="muted">Mon–Sun, 10am–10pm</p>
+            </div>
+            <div class="contact-card">
+                <div class="con-icon">🕐</div>
+                <h4>Opening Hours</h4>
+                <p>Lunch: 10:00 AM – 1:00 PM</p>
+                <p>Dinner: 12 AM – 3:00 PM</p>
+            </div>
+        </div>
+        <div class="message-form-wrap">
+            <h3>Send a Message</h3>
+            <form class="message-form" id="msgForm">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary wide">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-line">THE ALCHEMIST'S</span>
+                <span class="logo-sub">TABLE</span>
+            </div>
+            <p>Transforming fine ingredients into<br>extraordinary experiences.</p>
+        </div>
+        <div class="footer-links">
+            <h5>Navigation</h5>
+            <ul>
+                <li><a href="#home" class="js-nav" data-page="home">Home</a></li>
+                <li><a href="#menu" class="js-nav" data-page="menu">The Menu</a></li>
+                <li><a href="#reservations" class="js-nav" data-page="reservations">Reservations</a></li>
+                <li><a href="#gallery" class="js-nav" data-page="gallery">Gallery</a></li>
+                <li><a href="#contact" class="js-nav" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h5>Follow Us</h5>
+            <div class="socials">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">in</a>
+                <a href="#" aria-label="Twitter">tw</a>
+            </div>
+            <p class="footer-addr">131 Nattam Ave Road, Rawalpindi</p>
+            <p class="footer-addr">+150 630-7 989</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 The Alchemist's Table. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
